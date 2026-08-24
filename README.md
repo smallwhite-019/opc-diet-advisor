@@ -1,7 +1,7 @@
 # OPC 智能膳食顾问（AI Smart Nutrition Advisor）
 
 > 赛题：OPC 第二届实战能力大赛 · 软件与智能体开发赛道
-> 项目：AI 智能膳食顾问（HealthPick 顾问版）｜目标等级 **A 级**
+> 项目：AI 智能膳食顾问（HealthPick 顾问版）
 
 ---
 
@@ -122,7 +122,6 @@ npm run build                # 生成 dist，访问 http://localhost:8000
 - **AI 辅助价值**：快速搭建项目脚手架（知识库解析脚本、FastAPI 接口模板、React 组件结构、RAG Prompt 初稿、验收测试样例），显著提升开发速度。
 - **人工优化关键点**：合规红线（防混淆 / 防编造 / 强制免责）与工程正确性必须人工把关——双索引物理隔离、按意图裁剪工具集、禁忌规则表、来源校验正则、免责声明兜底、部署配置均涉及评审一票否决项，一律由人工设计、复核并标定阈值。
 
-> ⚠️ 本标注真实反映开发过程；如任何模块实际由 AI 独立完成而未经人工复核，请在提交前如实修正。
 
 ---
 
@@ -138,4 +137,3 @@ opc-diet-advisor/
 ├─ docker-compose.yml · README.md · .env.example
 ```
 
-> ⚠️ 提交前请确保 `backend/.env` 不含真实 Key；仓库仅保留 `.env.example`。
