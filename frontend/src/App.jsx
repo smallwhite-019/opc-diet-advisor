@@ -50,6 +50,10 @@ function LoginPage({ onAuth }) {
         <input type="password" placeholder="密码（至少6位）" value={password} onChange={e => setPassword(e.target.value)} />
         {err && <div className="login-err">{err}</div>}
         <button className="login-btn" type="submit" disabled={busy}>{busy ? '处理中…' : (mode === 'login' ? '登录' : '注册并登录')}</button>
+        <div className="login-demo">
+          <span>🎯 评审演示账号：<b>admin</b> / <b>admin123</b></span>
+          <button type="button" className="demo-fill" onClick={() => { setMode('login'); setUsername('admin'); setPassword('admin123'); setErr('') }}>一键填入</button>
+        </div>
       </form>
     </div>
   )
