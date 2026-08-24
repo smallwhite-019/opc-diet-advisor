@@ -1,10 +1,13 @@
 # 一键运行（进阶需求4 替代方案）：docker compose up --build
-# 后端 8000 + 前端静态由后端挂载(dist)，单容器即可访问 http://localhost:8000
+# 多阶段构建：前端 npm build + 后端 FastAPI 单容器。
+# 访问 http://localhost:8000 同时提供 UI（后端挂载 dist）与 API（/api）。
 services:
   diet-advisor:
-    build: ./backend
+    build:
+      context: .              # 项目根，使 Dockerfile 能访问 frontend/ 与 backend/
+      dockerfile: backend/Dockerfile
     ports:
       - "8000:8000"
     env_file:
-      - ./backend/.env   # 不存在则用 .env.example 默认值（降级模式）
+      - ./backend/.env        # 不存在则用 .env.example 默认值（降级模式）
     restart: unless-stopped
