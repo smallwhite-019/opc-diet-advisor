@@ -1,0 +1,15 @@
+# 敏感配置（切勿提交真实 Key）
+backend/.env
+*.db
+backend/server*.log
+
+# Python
+__pycache__/
+*.pyc
+
+# Node / 前端构建
+node_modules/
+frontend/dist/
+
+# 索引产物（可由 build_kb.py 重建，也可保留）
+# backend/kb/index_*.json
